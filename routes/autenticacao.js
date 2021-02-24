@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const MongoClient = require('mongodb').MongoClient;
-const uri = `mongodb+srv://administrador:${process.env.DB_SECRET}@cluster0.i6h0m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://administrador:${process.env.DB_SECRET}@${process.env.DB_HOST}.net/myFirstDatabase?retryWrites=true&w=majority`;
 const jwt = require('jsonwebtoken');
 
 router.get('/', function (req, res, next) {
